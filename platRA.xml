@@ -1,0 +1,80 @@
+<?xml version='1.0'?>
+ <!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid.dtd">
+ <platform version="3">
+ <AS  id="AS0"  routing="Full">
+	 
+	 <cluster id="cluster1" 
+			prefix="node-" suffix=""
+    	    radical="1-4" power="1Gf"
+		    bw="125MBps" lat="50us"
+			
+			bb_bw="2.25GBps"
+			bb_lat="500us"
+			
+			router_id="router1"/>	
+	 
+	 <cluster id="cluster2" 
+			prefix="node-" suffix=""
+    	    radical="5-8" power="1Gf"
+		    bw="125MBps" lat="50us"
+			 
+			bb_bw="2.25GBps"
+			bb_lat="500us"
+			 
+			router_id="router2"/>	 
+	 
+	 <cluster id="cluster3" 
+			prefix="node-" suffix=""
+    	    radical="9-12" power="1Gf"
+		    bw="125MBps" lat="50us"
+			 
+			bb_bw="2.25GBps"
+			bb_lat="500us"
+			 
+			router_id="router3"/>
+	 
+	 <cluster id="cluster4" 
+			prefix="node-" suffix=""
+    	    radical="13-16" power="1Gf"
+		    bw="125MBps" lat="50us"
+			 
+			bb_bw="2.25GBps"
+			bb_lat="500us"
+			 
+			router_id="router4"/>
+	 
+	 <!-- Links paras conexões entre os routers -->
+	 <link id="link_1_2" bandwidth="100MBps" latency="100us" /> <!-- cluster1 <======> cluster2 -->
+	 <link id="link_1_3" bandwidth="1MBps" latency="250us" /> <!-- cluster1 <======> cluster3 -->
+	 <link id="link_2_4" bandwidth="1MBps" latency="250us" /> <!-- cluster2 <======> cluster4 -->	
+	 <link id="link_3_4" bandwidth="10MBps" latency="150us" /> <!-- cluster3 <======> cluster4 -->
+
+	 <link id="link_1_4" bandwidth="1MBps" latency="250us" /> <!-- cluster3 <======> cluster4 -->
+	 
+	 <!-- Definição das conexões entre os clusters -->
+	 <ASroute src="cluster1" dst="cluster2"
+			gw_src="router1" gw_dst="router2">
+			<link_ctn id="link_1_2"/>
+	 </ASroute>
+	 
+	 <ASroute src="cluster1" dst="cluster3"
+			gw_src="router1" gw_dst="router3">
+			<link_ctn id="link_1_3"/>
+	 </ASroute>
+	 
+	 <ASroute src="cluster2" dst="cluster4"
+			gw_src="router2" gw_dst="router4">
+			<link_ctn id="link_2_4"/>
+	 </ASroute>
+
+	 <ASroute src="cluster3" dst="cluster4"
+			gw_src="router3" gw_dst="router4">
+			<link_ctn id="link_3_4"/>
+	 </ASroute>
+	 <ASroute src="cluster1" dst="cluster4"
+			gw_src="router1" gw_dst="router4">
+			<link_ctn id="link_1_4"/>
+	 </ASroute>
+	 
+ </AS>
+ </platform>

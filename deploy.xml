@@ -1,0 +1,98 @@
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid.dtd">
+<platform version="3">
+	
+	<!-- Cluster 1 -->
+	<process host="node-1" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-2" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-3" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-4" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	<!-- Cluster 1 -->
+	
+	
+	
+	<!-- Cluster 2 -->
+	<process host="node-5" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-6" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-7" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-8" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>	
+	<!-- Cluster 2 -->
+	
+	
+	
+	<!-- Cluster 3 -->
+	<process host="node-9" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-10" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-11" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-12" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	<!-- Cluster 3 -->
+	
+	
+	
+	<!-- Cluster 4 -->
+	<process host="node-13" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-14" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-15" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>
+	
+	<process host="node-16" function="Lamport.Lamport" start_time="0.0">
+		<argument value="0"/> <!-- Compute Duration -->
+		<argument value="1" /> <!-- Message Size -->
+	</process>	
+	<!-- Cluster 4 -->
+</platform>
